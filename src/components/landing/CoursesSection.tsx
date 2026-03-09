@@ -25,6 +25,7 @@ const courses = [
     desc: "Master the rules of Tajweed for beautiful, accurate Quran recitation.",
     longDesc: "Tajweed is the art of reciting the Quran with precision and beauty. This course covers all essential Tajweed rules so you can recite the Quran exactly as it was revealed.",
     learns: ["Master all Tajweed rules systematically", "Perfect your Makharij (articulation points)", "Learn Ghunnah, Idgham, Ikhfa, and more", "Recite with beauty and accuracy"],
+    image: courseTajweed,
   },
   {
     icon: Brain,
