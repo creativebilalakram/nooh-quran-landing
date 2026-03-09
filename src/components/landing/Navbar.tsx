@@ -28,7 +28,7 @@ const Navbar = () => {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between h-16 px-4 md:px-6">
+      <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#" className="font-display text-xl font-bold text-primary">
           Nooh <span className="text-accent">Quran</span>
         </a>
