@@ -67,8 +67,7 @@ const CoursesSection = () => {
 
   return (
     <>
-      <section id="courses" className="py-24 bg-muted/30 relative overflow-hidden">
-        {/* Subtle background pattern */}
+      <section id="courses" className="py-28 bg-muted/30 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
         
         <div className="container mx-auto px-4 relative">
@@ -97,19 +96,16 @@ const CoursesSection = () => {
                 {/* Thumbnail placeholder */}
                 <div className="relative h-40 bg-secondary overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="w-16 h-16 rounded-2xl bg-card/80 backdrop-blur-sm flex items-center justify-center shadow-lg"
-                    >
-                      <course.icon className="text-primary" size={28} />
-                    </motion.div>
-                  </div>
                   <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-card to-transparent" />
                 </div>
 
                 <div className="p-5">
-                  <h3 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">{course.title}</h3>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-secondary group-hover:bg-primary/10 flex items-center justify-center shrink-0 transition-colors duration-300">
+                      <course.icon className="text-primary" size={20} />
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">{course.title}</h3>
+                  </div>
                   <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">{course.desc}</p>
                   <span className="inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary group-hover:gap-2.5 transition-all duration-300">
                     Learn More <ArrowRight size={14} />
@@ -139,7 +135,6 @@ const CoursesSection = () => {
               className="bg-card rounded-2xl border border-border shadow-card-hover w-full max-w-lg max-h-[85vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Modal thumbnail */}
               <div className="relative h-48 bg-secondary overflow-hidden rounded-t-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10" />
                 <div className="absolute inset-0 flex items-center justify-center">

@@ -10,10 +10,34 @@ const trustPoints = [
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 bg-hero-gradient overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/[0.04] rounded-full blur-3xl" />
-      <div className="absolute bottom-10 left-10 w-60 h-60 bg-accent/[0.06] rounded-full blur-3xl" />
+    <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0">
+        <motion.div
+          animate={{
+            background: [
+              "linear-gradient(135deg, hsl(155 30% 95%) 0%, hsl(43 60% 97%) 50%, hsl(155 25% 96%) 100%)",
+              "linear-gradient(135deg, hsl(43 60% 97%) 0%, hsl(155 30% 95%) 50%, hsl(43 50% 96%) 100%)",
+              "linear-gradient(135deg, hsl(155 30% 95%) 0%, hsl(43 60% 97%) 50%, hsl(155 25% 96%) 100%)",
+            ],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute inset-0"
+        />
+        {/* Animated light orbs */}
+        <motion.div
+          animate={{ x: [0, 60, 0], y: [0, -30, 0], opacity: [0.04, 0.08, 0.04] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-20 right-[20%] w-[500px] h-[500px] bg-primary rounded-full blur-[120px]"
+        />
+        <motion.div
+          animate={{ x: [0, -40, 0], y: [0, 40, 0], opacity: [0.05, 0.09, 0.05] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          className="absolute bottom-0 left-[10%] w-[400px] h-[400px] bg-accent rounded-full blur-[100px]"
+        />
+      </div>
+
+      {/* Dot pattern */}
       <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)', backgroundSize: '48px 48px' }} />
 
       <div className="container mx-auto px-4 relative">

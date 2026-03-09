@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { BookOpen, Globe, Heart } from "lucide-react";
 
 const AboutSection = () => (
-  <section id="about" className="py-24 bg-background relative overflow-hidden">
+  <section id="about" className="py-28 bg-background relative overflow-hidden">
     <div className="absolute top-0 left-0 w-80 h-80 bg-accent/[0.03] rounded-full blur-3xl -translate-y-1/2" />
 
     <div className="container mx-auto px-4 relative">
@@ -24,7 +24,6 @@ const AboutSection = () => (
                 <p className="font-body text-sm text-muted-foreground mt-1">Placeholder</p>
               </div>
             </div>
-            {/* Floating stat */}
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}

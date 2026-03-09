@@ -8,7 +8,7 @@ const steps = [
 ];
 
 const HowItWorks = () => (
-  <section className="py-24 bg-muted/30 relative overflow-hidden">
+  <section className="py-28 bg-muted/30 relative overflow-hidden">
     <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
 
     <div className="container mx-auto px-4 relative">
@@ -45,20 +45,17 @@ const HowItWorks = () => (
               transition={{ delay: 0.2 + i * 0.2, duration: 0.6, type: "spring", damping: 20 }}
               className="relative flex flex-col items-center text-center group"
             >
-              {/* Mobile connecting line */}
               {i < steps.length - 1 && (
                 <div className="md:hidden absolute top-[5.5rem] left-1/2 w-[2px] h-16 -translate-x-1/2">
                   <div className="h-full bg-gradient-to-b from-primary/30 to-transparent" />
                 </div>
               )}
 
-              {/* Step number badge */}
               <motion.div
                 whileHover={{ scale: 1.08 }}
                 transition={{ type: "spring", stiffness: 400, damping: 15 }}
                 className="relative mb-6"
               >
-                {/* Animated ring */}
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -69,7 +66,6 @@ const HowItWorks = () => (
                     <s.icon className="text-primary" size={28} />
                   </div>
                 </div>
-                {/* Step number */}
                 <div className="absolute -top-1 -right-1 w-8 h-8 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-body text-xs font-bold z-20 shadow-md">
                   {s.step}
                 </div>

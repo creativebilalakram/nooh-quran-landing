@@ -11,7 +11,7 @@ const guarantees = [
 ];
 
 const ContactForm = () => (
-  <section id="contact" className="py-24 bg-muted/30 relative overflow-hidden">
+  <section id="contact" className="py-28 bg-muted/30 relative overflow-hidden">
     <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/[0.02] rounded-full blur-3xl translate-y-1/2" />
 
     <div className="container mx-auto px-4 relative">
@@ -56,7 +56,6 @@ const ContactForm = () => (
             Start Your Free Trial
           </Button>
 
-          {/* Trust badges below form */}
           <div className="flex flex-wrap justify-center gap-6 pt-4">
             {guarantees.map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-2">
