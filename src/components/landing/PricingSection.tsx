@@ -33,7 +33,7 @@ const plans = [
 ];
 
 const PricingSection = () => (
-  <section id="pricing" className="py-24 bg-background relative overflow-hidden">
+  <section id="pricing" className="py-28 bg-background relative overflow-hidden">
     <div className="absolute top-0 left-1/2 w-[600px] h-[600px] bg-primary/[0.02] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
 
     <div className="container mx-auto px-4 relative">

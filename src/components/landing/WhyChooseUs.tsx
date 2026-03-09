@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { User, Award, Users, Globe, BarChart3, HeartHandshake, ShieldCheck } from "lucide-react";
+import { User, Award, Users, Globe, BarChart3, HeartHandshake } from "lucide-react";
 
 const benefits = [
   { icon: User, title: "One-on-One Personalized Classes", desc: "Every student gets dedicated attention from their teacher for maximum learning." },
@@ -8,12 +8,10 @@ const benefits = [
   { icon: Globe, title: "Flexible Schedule Worldwide", desc: "Book classes at times that suit your timezone, any day of the week." },
   { icon: BarChart3, title: "Weekly Progress Reports", desc: "Stay updated with detailed progress tracking and feedback." },
   { icon: HeartHandshake, title: "Parent Community Support", desc: "Dedicated support and open communication for parents." },
-  { icon: ShieldCheck, title: "Money Back Guarantee", desc: "100% satisfaction guaranteed or your money back — no questions asked." },
 ];
 
 const WhyChooseUs = () => (
-  <section className="py-24 bg-background relative overflow-hidden">
-    {/* Decorative background elements */}
+  <section className="py-28 bg-background relative overflow-hidden">
     <div className="absolute top-0 right-0 w-96 h-96 bg-primary/[0.02] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
     <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/[0.03] rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
@@ -39,7 +37,6 @@ const WhyChooseUs = () => (
             transition={{ delay: i * 0.07, duration: 0.5 }}
             className="group relative bg-card rounded-2xl border border-border p-6 shadow-card hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-500"
           >
-            {/* Hover gradient overlay */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/[0.03] to-accent/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
             <div className="relative">

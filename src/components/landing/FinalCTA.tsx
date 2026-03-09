@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Sparkles } from "lucide-react";
 
 const FinalCTA = () => (
-  <section className="py-24 bg-cta-gradient relative overflow-hidden">
+  <section className="py-28 bg-cta-gradient relative overflow-hidden">
     <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--primary-foreground)) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
     <div className="absolute top-0 left-1/4 w-80 h-80 bg-primary-foreground/[0.03] rounded-full blur-3xl" />
 
