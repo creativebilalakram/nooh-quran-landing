@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { User, Award, Users, Globe, BarChart3, HeartHandshake } from "lucide-react";
+import { User, Award, Users, Globe, BarChart3, HeartHandshake, ShieldCheck, RefreshCcw } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const benefits = [
   { icon: User, title: "One-on-One Personalized Classes", desc: "Every student gets dedicated attention from their teacher for maximum learning." },
@@ -8,6 +9,8 @@ const benefits = [
   { icon: Globe, title: "Flexible Schedule Worldwide", desc: "Book classes at times that suit your timezone, any day of the week." },
   { icon: BarChart3, title: "Weekly Progress Reports", desc: "Stay updated with detailed progress tracking and feedback." },
   { icon: HeartHandshake, title: "Parent Community Support", desc: "Dedicated support and open communication for parents." },
+  { icon: ShieldCheck, title: "Money Back Guarantee", desc: "100% satisfaction guaranteed or get a full refund, no questions asked." },
+  { icon: RefreshCcw, title: "Makeup Classes Available", desc: "Missed a class? No worries — easily reschedule at your convenience." },
 ];
 
 const WhyChooseUs = () => (
@@ -27,7 +30,7 @@ const WhyChooseUs = () => (
         <p className="font-body text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">We go above and beyond to deliver an exceptional learning experience.</p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {benefits.map((b, i) => (
           <motion.div
             key={b.title}
@@ -53,6 +56,19 @@ const WhyChooseUs = () => (
           </motion.div>
         ))}
       </div>
+
+      {/* CTA below cards */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mt-16"
+      >
+        <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Start Your Quran Learning Journey Today</h3>
+        <Button variant="hero" size="xl">
+          Start Free Trial
+        </Button>
+      </motion.div>
     </div>
   </section>
 );

@@ -48,7 +48,7 @@ const PricingSection = () => (
         <p className="font-body text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">Choose the plan that fits your learning goals. All plans include a free 3-day trial.</p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto items-stretch">
+      <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
         {plans.map((plan, i) => (
           <motion.div
             key={plan.name}

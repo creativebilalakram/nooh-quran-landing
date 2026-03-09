@@ -23,15 +23,25 @@ const HowItWorks = () => (
         <p className="font-body text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">Your Quran learning journey begins with just a few simple steps.</p>
       </motion.div>
 
-      <div className="max-w-5xl mx-auto relative">
-        {/* Desktop connecting line */}
-        <div className="hidden md:block absolute top-[4.5rem] left-[16%] right-[16%] h-[2px]">
+      <div className="relative">
+        {/* Desktop connecting line — aligned to circle center (top of circle area) */}
+        <div className="hidden md:block absolute top-[48px] left-0 right-0 px-[16.67%]">
+          {/* Base line */}
+          <div className="h-[2px] bg-border rounded-full relative overflow-hidden">
+            {/* Animated glow traveling left to right */}
+            <motion.div
+              animate={{ x: ["-100%", "200%"] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
+              className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-primary/60 to-transparent"
+            />
+          </div>
+          {/* Static gradient overlay */}
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="h-full bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 origin-left"
+            className="h-[2px] bg-gradient-to-r from-primary/30 via-primary/50 to-primary/30 origin-left -mt-[2px] rounded-full"
           />
         </div>
 
@@ -45,6 +55,7 @@ const HowItWorks = () => (
               transition={{ delay: 0.2 + i * 0.2, duration: 0.6, type: "spring", damping: 20 }}
               className="relative flex flex-col items-center text-center group"
             >
+              {/* Mobile vertical connector */}
               {i < steps.length - 1 && (
                 <div className="md:hidden absolute top-[5.5rem] left-1/2 w-[2px] h-16 -translate-x-1/2">
                   <div className="h-full bg-gradient-to-b from-primary/30 to-transparent" />
