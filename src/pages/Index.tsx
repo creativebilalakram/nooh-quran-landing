@@ -3,12 +3,13 @@ import HeroSection from "@/components/landing/HeroSection";
 import TrustBar from "@/components/landing/TrustBar";
 import AboutSection from "@/components/landing/AboutSection";
 import CoursesSection from "@/components/landing/CoursesSection";
+import SocialProof from "@/components/landing/SocialProof";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
 import HowItWorks from "@/components/landing/HowItWorks";
 import PricingSection from "@/components/landing/PricingSection";
-import SocialProof from "@/components/landing/SocialProof";
-import ContactForm from "@/components/landing/ContactForm";
 import FinalCTA from "@/components/landing/FinalCTA";
+import FAQSection from "@/components/landing/FAQSection";
+import ContactForm from "@/components/landing/ContactForm";
 import Footer from "@/components/landing/Footer";
 
 const Index = () => {
@@ -19,12 +20,13 @@ const Index = () => {
       <TrustBar />
       <AboutSection />
       <CoursesSection />
+      <SocialProof />
       <WhyChooseUs />
       <HowItWorks />
       <PricingSection />
-      <SocialProof />
-      <ContactForm />
       <FinalCTA />
+      <FAQSection />
+      <ContactForm />
       <Footer />
     </div>
   );
