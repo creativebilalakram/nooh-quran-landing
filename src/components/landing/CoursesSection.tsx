@@ -33,6 +33,7 @@ const courses = [
     desc: "Structured Hifz program with proven memorization techniques.",
     longDesc: "Our Hifz program uses time-tested memorization techniques combined with modern teaching methods to help students memorize the Quran at their own pace with strong retention.",
     learns: ["Memorize with proven revision techniques", "Build a consistent Hifz schedule", "Strengthen retention through repetition", "Track progress with weekly assessments"],
+    image: courseMemorization,
   },
   {
     icon: Languages,
