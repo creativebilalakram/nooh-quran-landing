@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, Mic, Brain, Languages, BookMarked, GraduationCap, FileText, Sparkles, ArrowRight, Check, X } from "lucide-react";
+import courseQuranReading from "@/assets/course-quran-reading.webp";
+import courseTajweed from "@/assets/course-tajweed.webp";
+import courseMemorization from "@/assets/course-memorization.webp";
+import courseTranslation from "@/assets/course-translation.webp";
+import courseArabic from "@/assets/course-arabic.webp";
+import courseNoraniQaida from "@/assets/course-norani-qaida.webp";
+import courseTafseer from "@/assets/course-tafseer.webp";
+import courseSupplication from "@/assets/course-supplication.webp";
 import { Button } from "@/components/ui/button";
 
 const courses = [
