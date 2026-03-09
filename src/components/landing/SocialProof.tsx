@@ -9,7 +9,7 @@ const stats = [
 ];
 
 const SocialProof = () => (
-  <section className="py-28 bg-cta-gradient relative overflow-hidden">
+  <section className="py-28 bg-[image:var(--stats-gradient)] relative overflow-hidden">
     {/* Dot pattern */}
     <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--primary-foreground)) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 

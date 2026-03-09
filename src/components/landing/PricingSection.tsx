@@ -75,10 +75,10 @@ const PricingSection = () => (
               )}
 
               <div
-                className={`relative z-10 rounded-3xl border py-10 px-8 flex flex-col h-full transition-all duration-500 hover:-translate-y-2 hover:shadow-card-hover ${
+                className={`relative z-10 rounded-3xl border py-10 px-8 flex flex-col h-full transition-all duration-500 hover:-translate-y-2.5 hover:shadow-xl ${
                   plan.popular
                     ? "border-transparent bg-card shadow-card-hover scale-[1.03]"
-                    : "border-border bg-card shadow-card"
+                    : "border-border bg-card shadow-card hover:shadow-card-hover"
                 }`}
               >
                 {plan.popular && (
