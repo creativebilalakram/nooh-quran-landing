@@ -65,6 +65,7 @@ const courses = [
     desc: "Perfect beginner course for children and adults starting from scratch.",
     longDesc: "The Norani Qaida is the ideal starting point for anyone new to reading Arabic. This foundational course teaches the alphabet, joining rules, and basic reading skills in a fun, structured way.",
     learns: ["Learn the Arabic alphabet from scratch", "Master letter joining and formation", "Read basic words and sentences", "Prepare for Quran reading with confidence"],
+    image: courseNoraniQaida,
   },
   {
     icon: Sparkles,
