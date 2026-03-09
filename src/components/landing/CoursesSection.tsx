@@ -151,23 +151,21 @@ const CoursesSection = () => {
               className="bg-card rounded-2xl border border-border shadow-card-hover w-full max-w-lg max-h-[85vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative h-48 overflow-hidden rounded-t-2xl">
+              <div className="relative h-56 overflow-hidden rounded-t-2xl">
                 <img src={selected.image} alt={selected.title} className="w-full h-full object-cover" />
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-card to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-card to-transparent" />
                 <button
                   onClick={() => setSelected(null)}
                   className="absolute top-4 right-4 w-8 h-8 rounded-full bg-card/80 backdrop-blur-sm flex items-center justify-center hover:bg-card transition-colors"
                 >
                   <X size={16} className="text-foreground" />
                 </button>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-14 h-14 rounded-2xl bg-card/90 backdrop-blur-sm border border-border flex items-center justify-center shadow-lg">
+                  <selected.icon className="text-primary" size={28} />
+                </div>
               </div>
 
-              <div className="p-6 md:p-8">
-                <div className="flex justify-start -mt-8 mb-4">
-                  <div className="w-14 h-14 rounded-2xl bg-card border border-border flex items-center justify-center shadow-lg">
-                    <selected.icon className="text-primary" size={28} />
-                  </div>
-                </div>
+              <div className="p-6 md:p-8 pt-10 md:pt-12">
                 <h3 className="font-display text-2xl font-bold text-foreground mb-3">{selected.title}</h3>
                 <p className="font-body text-muted-foreground leading-relaxed mb-6">{selected.longDesc}</p>
 
