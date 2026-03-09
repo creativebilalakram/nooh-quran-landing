@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, Mic, Brain, Languages, BookMarked, GraduationCap, FileText, Sparkles, ArrowRight, Check, X } from "lucide-react";
+import courseQuranReading from "@/assets/course-quran-reading.webp";
+import courseTajweed from "@/assets/course-tajweed.webp";
+import courseMemorization from "@/assets/course-memorization.webp";
+import courseTranslation from "@/assets/course-translation.webp";
+import courseArabic from "@/assets/course-arabic.webp";
+import courseNoraniQaida from "@/assets/course-norani-qaida.webp";
+import courseTafseer from "@/assets/course-tafseer.webp";
+import courseSupplication from "@/assets/course-supplication.webp";
 import { Button } from "@/components/ui/button";
 
 const courses = [
@@ -9,7 +17,7 @@ const courses = [
     title: "Quran Reading",
     desc: "Learn to read the Quran fluently with proper pronunciation and confidence.",
     longDesc: "Our Quran Reading course is designed for students at every level. Whether you're a complete beginner or looking to improve fluency, our certified teachers guide you step-by-step through the Arabic script, pronunciation rules, and reading flow.",
-    learns: ["Read Arabic letters and words accurately", "Build fluency in Quran recitation", "Develop proper pronunciation (Makharij)", "Read independently with confidence"],
+    image: courseQuranReading,
   },
   {
     icon: Mic,
@@ -17,6 +25,7 @@ const courses = [
     desc: "Master the rules of Tajweed for beautiful, accurate Quran recitation.",
     longDesc: "Tajweed is the art of reciting the Quran with precision and beauty. This course covers all essential Tajweed rules so you can recite the Quran exactly as it was revealed.",
     learns: ["Master all Tajweed rules systematically", "Perfect your Makharij (articulation points)", "Learn Ghunnah, Idgham, Ikhfa, and more", "Recite with beauty and accuracy"],
+    image: courseTajweed,
   },
   {
     icon: Brain,
@@ -24,6 +33,7 @@ const courses = [
     desc: "Structured Hifz program with proven memorization techniques.",
     longDesc: "Our Hifz program uses time-tested memorization techniques combined with modern teaching methods to help students memorize the Quran at their own pace with strong retention.",
     learns: ["Memorize with proven revision techniques", "Build a consistent Hifz schedule", "Strengthen retention through repetition", "Track progress with weekly assessments"],
+    image: courseMemorization,
   },
   {
     icon: Languages,
@@ -31,6 +41,7 @@ const courses = [
     desc: "Understand the meanings of the Quran with word-by-word translation.",
     longDesc: "Go beyond reading — understand what Allah is saying. This course provides word-by-word translation and contextual meaning of Quranic verses to deepen your connection with the Quran.",
     learns: ["Understand word-by-word Quran translation", "Learn key Arabic vocabulary from the Quran", "Connect deeply with the Quran's message", "Study Tafseer-based contextual meanings"],
+    image: courseTranslation,
   },
   {
     icon: BookMarked,
@@ -38,6 +49,7 @@ const courses = [
     desc: "Deep dive into the interpretation and context of Quranic verses.",
     longDesc: "Explore the depth and wisdom of the Quran through detailed Tafseer. Understand the historical context, reasons for revelation, and scholarly interpretations of each Surah.",
     learns: ["Study classical and modern Tafseer", "Understand Asbab al-Nuzul (reasons of revelation)", "Explore scholarly interpretations", "Apply Quranic wisdom to daily life"],
+    image: courseTafseer,
   },
   {
     icon: GraduationCap,
@@ -45,6 +57,7 @@ const courses = [
     desc: "Learn Arabic language fundamentals to connect with the Quran directly.",
     longDesc: "Learn the Arabic language from scratch or improve your existing skills. This course covers grammar, vocabulary, and conversation skills with a focus on understanding the Quran.",
     learns: ["Learn Arabic grammar (Nahw & Sarf)", "Build practical vocabulary", "Read and understand Arabic texts", "Connect with the Quran in its original language"],
+    image: courseArabic,
   },
   {
     icon: FileText,
@@ -52,6 +65,7 @@ const courses = [
     desc: "Perfect beginner course for children and adults starting from scratch.",
     longDesc: "The Norani Qaida is the ideal starting point for anyone new to reading Arabic. This foundational course teaches the alphabet, joining rules, and basic reading skills in a fun, structured way.",
     learns: ["Learn the Arabic alphabet from scratch", "Master letter joining and formation", "Read basic words and sentences", "Prepare for Quran reading with confidence"],
+    image: courseNoraniQaida,
   },
   {
     icon: Sparkles,
@@ -59,6 +73,7 @@ const courses = [
     desc: "Learn essential daily duas and supplications with meaning.",
     longDesc: "Enrich your daily worship with authentic duas from the Quran and Sunnah. Learn the meaning, pronunciation, and occasions for each supplication.",
     learns: ["Learn essential daily duas", "Understand meanings and context", "Memorize with proper Arabic pronunciation", "Apply duas in daily worship routine"],
+    image: courseSupplication,
   },
 ];
 
@@ -93,9 +108,9 @@ const CoursesSection = () => {
                 onClick={() => setSelected(course)}
                 className="group cursor-pointer bg-card rounded-2xl border border-border overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500"
               >
-                {/* Thumbnail placeholder */}
-                <div className="relative h-40 bg-secondary overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
+                {/* Course thumbnail */}
+                <div className="relative h-40 overflow-hidden">
+                  <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
                   <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-card to-transparent" />
                 </div>
 
