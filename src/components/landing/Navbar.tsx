@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { scrollToPricing } from "@/lib/whatsapp";
 import { Menu, X } from "lucide-react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import logoSvg from "@/assets/logo.svg";
@@ -41,7 +42,7 @@ const Navbar = () => {
                   {l}
                 </a>
               ))}
-              <Button variant="hero" size="sm">Start Free Trial</Button>
+              <Button variant="hero" size="sm" onClick={scrollToPricing}>Start Free Trial</Button>
             </div>
             <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
               {open ? <X size={24} /> : <Menu size={24} />}
@@ -54,7 +55,7 @@ const Navbar = () => {
                   {l}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="w-full">Start Free Trial</Button>
+              <Button variant="hero" size="sm" className="w-full" onClick={() => { setOpen(false); scrollToPricing(); }}>Start Free Trial</Button>
             </div>
           )}
         </motion.nav>

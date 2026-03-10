@@ -4,6 +4,7 @@ import { MessageCircle, CheckCircle2 } from "lucide-react";
 import whatsappImg from "@/assets/whatsapp-3d.png";
 import qrCode from "@/assets/community-qr.png";
 import ImageWithSkeleton from "@/components/ui/image-skeleton";
+import { scrollToPricing, openWhatsAppGeneral } from "@/lib/whatsapp";
 
 const trustItems = ["Free Trial Available", "One-on-One Classes", "Flexible Schedule"];
 
@@ -25,7 +26,6 @@ const FinalCTA = () => (
 
     <div className="container mx-auto px-4 relative z-[2]">
       <div className="grid lg:grid-cols-[240px_1fr_240px] gap-6 lg:gap-10 items-stretch">
-
         {/* Left — WhatsApp */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -64,8 +64,8 @@ const FinalCTA = () => (
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3.5 justify-center mb-7">
-            <Button variant="gold" size="xl">Start Free Trial</Button>
-            <Button variant="whatsapp" size="xl">
+            <Button variant="gold" size="xl" onClick={scrollToPricing}>Start Free Trial</Button>
+            <Button variant="whatsapp" size="xl" onClick={openWhatsAppGeneral}>
               <MessageCircle size={20} />
               Chat on WhatsApp
             </Button>

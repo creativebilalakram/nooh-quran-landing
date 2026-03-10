@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { scrollToPricing } from "@/lib/whatsapp";
 import { BookOpen, Mic, Brain, Languages, BookMarked, GraduationCap, FileText, Sparkles, ArrowRight, Check, X } from "lucide-react";
 import courseQuranReading from "@/assets/course-quran-reading.webp";
 import courseTajweed from "@/assets/course-tajweed.webp";
@@ -184,7 +185,7 @@ const CoursesSection = () => {
                   ))}
                 </ul>
 
-                <Button variant="hero" size="lg" className="w-full">
+                <Button variant="hero" size="lg" className="w-full" onClick={() => { setSelected(null); scrollToPricing(); }}>
                   Start Free Trial
                 </Button>
               </div>

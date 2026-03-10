@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { User, Award, Users, Globe, BarChart3, HeartHandshake, ShieldCheck, RefreshCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { scrollToPricing } from "@/lib/whatsapp";
 
 const benefits = [
 { icon: User, title: "One-on-One Personalized Classes", desc: "Every student gets dedicated attention from their teacher for maximum learning." },
@@ -65,7 +66,7 @@ const WhyChooseUs = () =>
       className="text-center mt-16">
       
         <h3 className="font-display text-2xl font-bold text-foreground mb-4 md:text-sm">Start Your Quran Learning Journey Today</h3>
-        <Button variant="hero" size="xl">
+        <Button variant="hero" size="xl" onClick={scrollToPricing}>
           Start Free Trial
         </Button>
       </motion.div>

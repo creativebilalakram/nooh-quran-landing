@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle, MessageCircle, Play } from "lucide-react";
 import { useState, useEffect } from "react";
+import { scrollToPricing, openWhatsAppGeneral } from "@/lib/whatsapp";
 import heroBg from "@/assets/hero-bg.webp";
 import heroStudent1 from "@/assets/hero-student-1.jpg";
 import heroStudent2 from "@/assets/hero-student-2.jpg";
@@ -113,10 +114,10 @@ const HeroSection = () => {
               ))}
             </ul>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl">
+              <Button variant="hero" size="xl" onClick={scrollToPricing}>
                 Start Free Trial
               </Button>
-              <Button variant="whatsapp" size="xl">
+              <Button variant="whatsapp" size="xl" onClick={openWhatsAppGeneral}>
                 <MessageCircle size={20} />
                 Chat on WhatsApp
               </Button>
