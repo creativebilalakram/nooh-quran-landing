@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { User, Award, Users, Globe, BarChart3, HeartHandshake, ShieldCheck, RefreshCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { scrollToPricing } from "@/lib/whatsapp";
 
 const benefits = [
 { icon: User, title: "One-on-One Personalized Classes", desc: "Every student gets dedicated attention from their teacher for maximum learning." },
