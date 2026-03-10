@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { scrollToPricing } from "@/lib/whatsapp";
 import { Menu, X } from "lucide-react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import logoSvg from "@/assets/logo.svg";
