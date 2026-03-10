@@ -51,7 +51,7 @@ const SocialProof = () => (
       />
     ))}
 
-    <div className="container mx-auto px-4 relative">
+    <div className="container mx-auto px-4 relative z-[2]">
       {/* Hide last item on mobile (5→4 not applicable here since only 4 stats) */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16">
         {stats.map((s, i) => (
