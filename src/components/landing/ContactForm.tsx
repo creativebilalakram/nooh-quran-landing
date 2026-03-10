@@ -38,13 +38,14 @@ const ContactForm = () => (
         </p>
       </motion.div>
 
+      {/* On mobile: form first, contact card second. On desktop: contact left, form right */}
       <div className="grid lg:grid-cols-[1fr_1.85fr] gap-6 lg:gap-8">
-        {/* Left - Contact Info Card */}
+        {/* Contact Info Card - order-2 on mobile, order-1 on lg */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="bg-[image:var(--cta-gradient)] rounded-3xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden"
+          className="bg-[image:var(--cta-gradient)] rounded-3xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden order-2 lg:order-1"
         >
           <div>
             <h3 className="font-display text-2xl font-bold text-primary-foreground mb-3">
@@ -87,12 +88,12 @@ const ContactForm = () => (
           </div>
         </motion.div>
 
-        {/* Right - Form Card */}
+        {/* Form Card - order-1 on mobile, order-2 on lg */}
         <motion.form
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="bg-card rounded-3xl border border-border p-8 md:p-10 shadow-card-hover space-y-5"
+          className="bg-card rounded-3xl border border-border p-8 md:p-10 shadow-card-hover space-y-5 order-1 lg:order-2"
           onSubmit={(e) => e.preventDefault()}
         >
           <div className="grid sm:grid-cols-2 gap-5">

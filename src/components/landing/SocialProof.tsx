@@ -9,7 +9,7 @@ const stats = [
 ];
 
 const SocialProof = () => (
-  <section className="py-28 bg-[image:var(--stats-gradient)] relative overflow-hidden">
+  <section className="py-28 bg-[image:var(--stats-gradient)] animate-gradient-shift relative overflow-hidden">
     {/* Dot pattern */}
     <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--primary-foreground)) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
     {/* Radial glow */}
@@ -52,6 +52,7 @@ const SocialProof = () => (
     ))}
 
     <div className="container mx-auto px-4 relative">
+      {/* Hide last item on mobile (5→4 not applicable here since only 4 stats) */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16">
         {stats.map((s, i) => (
           <motion.div
