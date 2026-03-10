@@ -66,7 +66,7 @@ const WhyChooseUs = () =>
       className="text-center mt-16">
       
         <h3 className="font-display text-2xl font-bold text-foreground mb-4 md:text-sm">Start Your Quran Learning Journey Today</h3>
-        <Button variant="hero" size="xl">
+        <Button variant="hero" size="xl" onClick={scrollToPricing}>
           Start Free Trial
         </Button>
       </motion.div>

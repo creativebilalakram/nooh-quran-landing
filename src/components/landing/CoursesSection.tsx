@@ -185,7 +185,7 @@ const CoursesSection = () => {
                   ))}
                 </ul>
 
-                <Button variant="hero" size="lg" className="w-full">
+                <Button variant="hero" size="lg" className="w-full" onClick={() => { setSelected(null); scrollToPricing(); }}>
                   Start Free Trial
                 </Button>
               </div>

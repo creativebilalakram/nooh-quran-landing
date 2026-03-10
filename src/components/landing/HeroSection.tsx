@@ -114,10 +114,10 @@ const HeroSection = () => {
               ))}
             </ul>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl" onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}>
+              <Button variant="hero" size="xl" onClick={scrollToPricing}>
                 Start Free Trial
               </Button>
-              <Button variant="whatsapp" size="xl" onClick={() => { const { openWhatsAppGeneral } = require("@/lib/whatsapp"); openWhatsAppGeneral(); }}>
+              <Button variant="whatsapp" size="xl" onClick={openWhatsAppGeneral}>
                 <MessageCircle size={20} />
                 Chat on WhatsApp
               </Button>

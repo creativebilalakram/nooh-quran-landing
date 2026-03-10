@@ -55,7 +55,7 @@ const Navbar = () => {
                   {l}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="w-full">Start Free Trial</Button>
+              <Button variant="hero" size="sm" className="w-full" onClick={() => { setOpen(false); scrollToPricing(); }}>Start Free Trial</Button>
             </div>
           )}
         </motion.nav>
