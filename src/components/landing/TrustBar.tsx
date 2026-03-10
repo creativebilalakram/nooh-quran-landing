@@ -12,6 +12,7 @@ const items = [
 const TrustBar = () => (
   <section className="py-14 bg-card border-y border-border relative">
     <div className="container mx-auto px-4">
+      {/* Show only first 4 on mobile, all 5 on md+ */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
         {items.map((item, i) => (
           <motion.div
@@ -20,7 +21,7 @@ const TrustBar = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="flex flex-col items-center text-center gap-3 group"
+            className={`flex flex-col items-center text-center gap-3 group ${i === 4 ? "hidden md:flex" : ""}`}
           >
             <motion.div
               whileHover={{ scale: 1.1, rotate: -5 }}

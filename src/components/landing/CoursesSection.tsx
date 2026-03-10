@@ -110,22 +110,24 @@ const CoursesSection = () => {
                 onClick={() => setSelected(course)}
                 className="group cursor-pointer bg-card rounded-2xl border border-border overflow-hidden shadow-card hover:shadow-xl hover:-translate-y-2.5 transition-all duration-300"
               >
-                {/* Course thumbnail */}
+                {/* Course thumbnail with zoom on hover */}
                 <div className="relative h-40 overflow-hidden">
-                  <ImageWithSkeleton src={course.image} alt={course.title} className="w-full h-full object-cover" containerClassName="w-full h-full" />
+                  <div className="w-full h-full transition-transform duration-500 group-hover:scale-110">
+                    <ImageWithSkeleton src={course.image} alt={course.title} className="w-full h-full object-cover" containerClassName="w-full h-full" />
+                  </div>
                   <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-card to-transparent" />
                 </div>
 
                 <div className="p-5">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-secondary group-hover:bg-primary/10 flex items-center justify-center shrink-0 transition-colors duration-300">
+                    <div className="w-10 h-10 rounded-xl bg-secondary group-hover:bg-primary/10 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:rotate-[5deg]">
                       <course.icon className="text-primary" size={20} />
                     </div>
                     <h3 className="font-display text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">{course.title}</h3>
                   </div>
                   <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">{course.desc}</p>
                   <span className="inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary group-hover:gap-2.5 transition-all duration-300">
-                    Learn More <ArrowRight size={14} />
+                    Learn More <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </div>
               </motion.div>
@@ -149,7 +151,7 @@ const CoursesSection = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 30 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-card rounded-2xl border border-border shadow-card-hover w-full max-w-lg max-h-[85vh] overflow-y-auto"
+              className="bg-card rounded-2xl border border-border shadow-card-hover w-full max-w-lg max-h-[85vh] overflow-y-auto scrollbar-thin"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative h-56 overflow-hidden rounded-t-2xl">
