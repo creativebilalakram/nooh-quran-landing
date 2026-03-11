@@ -29,6 +29,7 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
+
   e.preventDefault();
 
   if (!name.trim() || !email.trim() || !selectedPlan) {
@@ -53,21 +54,29 @@ const ContactForm = () => {
 
   try {
 
-    await fetch("https://script.google.com/macros/s/AKfycbz36cosyOrk3ty_H7KbXWLee1uTqzew7um3iZDZhHQ2m8YhKL5pcwfzWAK2rJnckc5Y/exec", {
-      method: "POST",
-      body: JSON.stringify(data)
-    });
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbz36cosyOrk3ty_H7KbXWLee1uTqzew7um3iZDZhHQ2m8YhKL5pcwfzWAK2rJnckc5Y/exec",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      }
+    );
 
     toast.success(`Booking confirmed! Your ID: ${userId}`);
 
     openWhatsAppWithBooking(userId, name.trim(), selectedPlan);
 
-  } catch (error) {
+  } catch (err) {
 
-    console.error("Sheet error:", error);
+    console.error("Error sending data:", err);
+
     toast.error("Something went wrong. Please try again.");
 
   }
+
 };
 
   return (
