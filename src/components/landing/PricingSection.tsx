@@ -7,29 +7,46 @@ import { scrollToForm } from "@/lib/whatsapp";
 const plans = [
   {
     name: "Basic",
-    price: "$35",
+    price: "$60",
     period: "/month",
-    classes: "2 Classes/Week",
+    classes: "1 Class/Week",
     duration: "30 min each",
-    features: ["Quran Reading", "Basic Tajweed", "Progress Reports", "Flexible Timing"],
+    features: [
+      "Quran Reading",
+      "Basic Tajweed",
+      "One-on-One Classes",
+      "Flexible Timing",
+    ],
     popular: false,
   },
   {
     name: "Standard",
-    price: "$60",
+    price: "$120",
     period: "/month",
-    classes: "4 Classes/Week",
+    classes: "3 Classes/Week",
     duration: "30 min each",
-    features: ["All Basic Features", "Advanced Tajweed", "Hifz Program", "Priority Support", "Weekly Reports"],
+    features: [
+      "All Basic Features",
+      "Quran Reading & Tajweed",
+      "Hifz Program Support",
+      "Priority Scheduling",
+      "Weekly Progress Reports",
+    ],
     popular: true,
   },
   {
     name: "Premium",
-    price: "$90",
+    price: "$200",
     period: "/month",
     classes: "5 Classes/Week",
-    duration: "45 min each",
-    features: ["All Standard Features", "1-on-1 Mentorship", "Custom Curriculum", "Parent Meetings", "Certificate"],
+    duration: "30 min each",
+    features: [
+      "All Standard Features",
+      "Complete Quran Learning",
+      "Hifz & Translation Support",
+      "Personalized Curriculum",
+      "Certificate of Completion",
+    ],
     popular: false,
   },
 ];
@@ -53,9 +70,17 @@ const PricingSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block font-body text-sm font-semibold uppercase tracking-wider text-accent mb-4 bg-accent/10 px-4 py-1.5 rounded-full">Pricing</span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-5">Simple, Transparent Pricing</h2>
-          <p className="font-body text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">Choose the plan that fits your learning goals. All plans include a free 3-day trial.</p>
+          <span className="inline-block font-body text-sm font-semibold uppercase tracking-wider text-accent mb-4 bg-accent/10 px-4 py-1.5 rounded-full">
+            Pricing
+          </span>
+
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-5">
+            Simple, Transparent Pricing
+          </h2>
+
+          <p className="font-body text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
+            Choose the plan that fits your learning goals. All plans include a free trial class.
+          </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -92,25 +117,42 @@ const PricingSection = () => {
                 >
                   {plan.popular && (
                     <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[image:var(--btn-gradient)] text-primary-foreground font-body text-xs font-bold px-5 py-1.5 rounded-full flex items-center gap-1.5 shadow-[var(--shadow-primary)] z-20">
-                      <Star size={12} className="drop-shadow-sm" /> Most Popular
+                      <Star size={12} className="drop-shadow-sm" />
+                      Most Popular
                     </div>
                   )}
-                  <h3 className="font-display text-xl font-bold text-foreground mb-1">{plan.name}</h3>
-                  <p className="font-body text-sm text-muted-foreground mb-6">{plan.classes} • {plan.duration}</p>
+
+                  <h3 className="font-display text-xl font-bold text-foreground mb-1">
+                    {plan.name}
+                  </h3>
+
+                  <p className="font-body text-sm text-muted-foreground mb-6">
+                    {plan.classes} • {plan.duration}
+                  </p>
+
                   <div className="mb-8">
-                    <span className="font-display text-5xl font-bold text-foreground">{plan.price}</span>
-                    <span className="font-body text-sm text-muted-foreground">{plan.period}</span>
+                    <span className="font-display text-5xl font-bold text-foreground">
+                      {plan.price}
+                    </span>
+                    <span className="font-body text-sm text-muted-foreground">
+                      {plan.period}
+                    </span>
                   </div>
+
                   <ul className="space-y-4 mb-10 flex-1">
-                    {plan.features.map((f) => (
-                      <li key={f} className="flex items-center gap-3 font-body text-sm text-foreground">
+                    {plan.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-3 font-body text-sm text-foreground"
+                      >
                         <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                           <Check className="text-primary" size={12} />
                         </div>
-                        {f}
+                        {feature}
                       </li>
                     ))}
                   </ul>
+
                   <Button
                     variant={plan.popular ? "hero" : "heroOutline"}
                     size="lg"
